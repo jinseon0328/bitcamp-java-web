@@ -22,8 +22,13 @@ var tag1 = document.getElementById("btn1");
 tag1.onclick = function() {
   // 서버에 요청
   var xhr = new XMLHttpRequest();
+  // 생성자 역할을 하는 함수
+ // xhr.open("GET", "exam06.jsp?target=naver", false);
   xhr.open("GET", "exam06.jsp", false);
+ // xhr.open("GET", "국정원URL", false);
+  // 소켓 연결
   xhr.send();
+  // 데이터 전송
   
   // 서버가 보낸 데이터를 div 태그에 넣기
   var tag2 = document.getElementById("d1");

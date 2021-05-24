@@ -9,6 +9,10 @@
 <script>
 "use strict"
 
+//객체에 값을 집어넣을 때는 그냥 하면 된다.
+// var v1;
+// 필요없다.
+
 // 자바스크립트에서는 글로벌 변수가 모두 window 객체에 소속된다고 했다.
 // 결국 내부적으로 변수를 다룰 때는 자바의 맵 객체의 프로퍼티 방식으로 다룬다.
 window.v1 = 100; // java => map.put("v1", 100);
@@ -32,6 +36,12 @@ console.log(v1);
 
 var v1 = true;
 console.log(v1);
+
+/* 자바는 불가능
+int a;
+int a;
+int a;
+*/
 </script>
 </body>
 </html>
