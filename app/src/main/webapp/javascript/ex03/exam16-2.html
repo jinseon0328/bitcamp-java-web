@@ -19,7 +19,12 @@ function f1() {
 }
 
 // f1() 함수를 2초 마다 호출하라!
+// window.timerId
+// setInterval 실행시키는 함수가 아니라 메서드 이름에도 뜻이있다.
+// 인터벌을 설정한다 execute run play는 실행이다.
+// f1()이라는 메서드를 2초에 한번씩 실행시켜달라고 등록시켜달라고 한다.
 var timerId = window.setInterval(f1, 2000);
+console.log("======>");
 
 </script>
 

@@ -19,13 +19,15 @@ function f1(a) {
     console.log(value);
   }
   console.log("----------------");
+
   for (var i in arguments) {
     console.log(arguments[i]);
   }
   console.log("----------------");
-  for (var i = 0; i < arguments.length; i++) {
+ /* for (var i = 0; i < arguments.length; i++) {
     console.log(arguments[i]);
   }
+  */
 }
 
 //f1();
@@ -38,6 +40,7 @@ f1(100, 200, 300, 400, 500);
 // => 자바는 메서드를 찾을 때 값의 타입과 개수를 이용하여 찾는다.
 //    그러나 자바스크립트는 값의 타입이 없고 아규먼트의 개수도 의미가 없다.
 //    그래서 자바스크립트는 같은 이름을 가진 함수를 여러 개 만들 수 없다.
+//    자바스크립트에서 같은 이름을 가진 함수를 다시 만들면 그 전의 함수를 덮어쓴다.
 </script>
 </body>
 </html>

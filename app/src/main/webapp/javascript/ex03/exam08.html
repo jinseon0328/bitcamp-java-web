@@ -11,6 +11,8 @@
 // 변수 선언과 그 변수의 값을 초기화시키는 할당문이 함께 있을 경우
 // 호이스팅 대상은 변수 선언만이 그 대상이 된다.
 // 
+// var v1; 이것이 젤 먼저 선언된다.
+// var f1;
 
 console.log(v1); // 아래에 선언된 v1 변수가 호이스팅 되기 때문에 사용할 수는 있다. 
 
@@ -22,11 +24,29 @@ console.log(v1);
 //f1(); // 실행 오류! 
 
 var f1 = function() { // 위의 경우와 마찬가지로 현재 위치에 도달했을 때 익명 함수가 정의되어 그 주소가 f1에 저장된다.
+	// 변수 선언만 호이스팅 되고 할당문은 호이스팅 되지 않는다.
     console.log("안녕!");
 };
 
 f1(); //OK! 현재 f1 변수에는 익명 함수의 주소가 들어 있다.
+
+function execute(f) {
+	f();
+}
+
+execute(function() {console.log("okok")});
+
+
 </script>
+
+void m(Command c) {
+}
+
+class MyCommand implements Command {
+project void service() {...}
+}
+
+m(My command);
 
 </body>
 </html>
