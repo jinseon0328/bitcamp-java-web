@@ -39,7 +39,7 @@ button {padding: 30px;}
 // target과 bubble 단계에서 호출된다. 
 // => 따라서 #btn1이나 #btn2를 클릭하면, 
 //    버튼에 등록된 함수 뿐만 아니라 
-//    그 부모들에 등록된 함수가 있다면 그 함수들도 호출된다.
+//    그 부모들에 등록된 함수가 있다면 그 함수(리스너)들도 호출된다.
 document.getElementById("btn1").addEventListener("click", function(e) {
 	console.log("버튼1...");
 });

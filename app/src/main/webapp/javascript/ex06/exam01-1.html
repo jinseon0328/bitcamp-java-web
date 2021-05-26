@@ -53,7 +53,7 @@ function btn1Click() {
 
 // 방법2:
 var btn2 = document.getElementById("btn2");
-//var btn2 = document.querySelector("#btn2"); // 둘 중 아무거나 사용하면 된다.
+//var btn2 = document.querySelector("#btn2"); // 둘 중 아무거나 사용하면 된다. 그래도 밑의 코드를 추천한다.
 
 function f1() {
     var str = "Hello2a!";
@@ -62,21 +62,21 @@ function f1() {
 }
 btn2.onclick = f1; // 함수의 주소를 객체 프로퍼티로 저장하는 순간 그 객체에 소속된다.
 
-/*
+
 btn2.onclick = function() {
     var str = "Hello2b!";
     window.alert(str);
     console.log(this); // 일반 함수에서 this는 그 함수가 소속된 객체이다.
 };
-*/
 
-/*
+
+
 btn2.onclick = () => {
   var str = "Hello2c!";
   window.alert(str);
   console.log(this); // arrow function에서 this는 window 객체이다.
 };
-*/
+
 
 // 방법3:
 // => addEventListener(이벤트명, 리스너);
@@ -84,7 +84,7 @@ btn2.onclick = () => {
 //    클릭 이벤트의 이름은 "onclick"이 아니라, "click"이다.
 //
 var btn3 = document.querySelector("#btn3");
-btn3.addEventListener("click", function() {
+btn3.addEventListener("click", function() { //onclick은 프라퍼티명이다 //setEventListener은 1개만 쓸 때이다!
   var str = "Hi1!!";
   window.alert(str);
   console.log(this); // this는 btn3 객체이다.
@@ -101,6 +101,8 @@ function btn3Click() {
   console.log(this); // this는 btn3 객체이다.
 } 
 
+
+// 추천은 첫번째 익명 두번째 애로우 코드이고 3번째는 비추이다.
 </script>
 </body>
 </html>

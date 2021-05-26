@@ -65,16 +65,18 @@ var el = document.querySelectorAll("tbody tr");
 
 for (var e of el) {
   e.addEventListener("click", function(e) {
-    // e.target 은 이벤트가 발생한 객체를 가리킨다.
+    // e.target 은 이벤트가 발생한 객체를 가리킨다. <td>
     console.log(e.target);
     
     // 리스너가 등록된 태그를 가리키고 싶다면,
-    // e.currentTarget 프로퍼티의 값을 사용하라!
+    // e.currentTarget 프로퍼티의 값을 사용하라! <tr>
     console.log(e.currentTarget);
     
     // var no = e.target.getAttribute("data-no");
     var no = e.currentTarget.getAttribute("data-no");
     window.alert(no + " 번 게시물의 제목을 눌렀음!");
+    
+    window.location.href = "http://www.naver.com?no=1"
   });
 }
 </script>
