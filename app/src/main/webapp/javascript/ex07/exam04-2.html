@@ -30,6 +30,22 @@ var header = document.querySelector("#header"),
   xhr.send();
 })();
 
+/*// 위의 function과 아래쪽은 같다
+function getHeader() { // 머리말 가져오기
+	  var xhr = new XMLHttpRequest();
+	  xhr.onreadystatechange = () => {
+	      if (xhr.readyState == 4) {
+	          if (xhr.status == 200) {
+	              header.innerHTML = xhr.responseText;
+	          }
+	      }
+	  };
+	  xhr.open("GET", "test5.jsp", true);
+	  xhr.send();
+	}
+	getHeader();
+*/
+
 (function() { // 꼬리말 가져오기
   var xhr = new XMLHttpRequest();
   xhr.onreadystatechange = () => {
